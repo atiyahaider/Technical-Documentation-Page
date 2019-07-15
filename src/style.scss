@@ -1,0 +1,166 @@
+:root {
+  --color-lightgray: rgb(231, 231, 231);
+  --color-darkgray: #595959;
+ // --color-medgray: #c0c0c0;
+  --color-gray: #808080;
+  --color-green33: hsl(73, 41%, 33%);
+  --color-green46: hsl(73, 41%, 46%);
+  --color-green50: hsl(73, 53%, 50%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  background: url("https://res.cloudinary.com/dzsnl7ocm/image/upload/v1538414819/topography.png");
+  line-height: 1.5;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background-color: var(--color-darkgray);
+}
+
+#header{
+  text-align: center;
+  margin-top: 15px;
+  padding: 10px;
+  font-size: 1.7em;
+  color: var(--color-green46);
+  border-bottom: 1px solid var(--color-gray);
+}
+
+#navbar ul {
+  display: block;
+  list-style: none;
+  padding-left: 12px;
+  height: 75vh;
+  overflow-y: auto;
+}
+
+#navbar li {
+  cursor: pointer;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.25em;
+  color: white;
+  padding: 7px;
+  padding-left: 0;
+  border-bottom: 1px solid var(--color-gray);
+  transition: color 275ms ease-out;
+}
+
+.nav-link:hover {
+  color: var(--color-green50);
+  background-color: var(--color-gray);
+}
+
+#main-doc{
+  margin-left: 310px;
+  padding: 0 15px;
+  margin-bottom: 100px;
+  color: var(--color-gray);
+}
+
+.main-section header{
+  padding-top: 25px;
+  text-align: left;
+  font-size: 1.7em;
+  color: hsl(73, 41%, 33%);
+}
+
+article{
+  margin: 10px 20px;
+  font-size: 0.95em;
+}
+
+article ul, ol{
+  padding: 10px 0 0 20px;
+}
+
+code{
+  display: block;
+  margin: 10px;
+  margin-left: 0;
+  padding: 10px;
+  background-color: var(--color-lightgray);
+  white-space: pre-wrap;
+}
+
+table{
+  margin-top: 10px;
+  min-width: 300px;
+}
+
+table, th, td{
+  background-color: var(--color-lightgray);
+  border: 1px solid var(--color-gray);
+  border-collapse: collapse;
+  padding: 5px;
+  font-family: Verdana, sans-serif;
+  font-size: 0.90em;
+}
+
+samp{
+ display: block;
+  font-family: Verdana,sans-serif;
+  margin: 10px;
+  margin-left: 0;
+  padding: 10px;
+  background-color: var(--color-lightgray);
+}
+
+@media only screen and (max-width: 870px) {
+  #navbar {
+    width: 240px;
+  }
+  #main-doc{
+    padding: 0;
+    margin-left: 250px;
+   }
+  #header{
+    margin-top: 0px;
+    padding: 5px;
+    font-size: 1.3em;
+  }
+  .nav-link {
+    font-size: 1em;
+    padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #navbar{
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 200px;
+    z-index: 1;
+  }
+  #navbar ul{
+    height: 160px;
+  }
+  #main-doc{
+    position: relative;
+    margin-left: 0px;
+    margin-top: 200px;
+    margin-bottom: 50px;
+    padding: 0 10px;
+  }
+  article{
+    margin-right: 10px;
+  }
+}
